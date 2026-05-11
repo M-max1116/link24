@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Shunpu';
+    src: url('https://cdn.jsdelivr.net/gh/M-max1116/font1@main/Ver1.01_Shunpu_Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Kanji_yutsudu';
+    src: url('https://cdn.jsdelivr.net/gh/M-max1116/FONT2@main/Kanji_yutsudu-Regular.woff2') format('woff2');
+}
+
+/* =========================
+   小宮本文
+========================= */
+.kmy {
+    font-family: 'Shunpu', serif !important;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    margin: 2px 0 !important;
+}
+
+/* =========================
+   トガシ本文
+========================= */
+.tgs {
+    font-family: 'Kanji_yutsudu', sans-serif !important;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.16em;
+    margin: 2px 0 !important;
+}
+
+/* =========================
+   ★番号・名前・日時（重要修正）
+========================= */
+#postList a,
+#postList .name,
+#postList .time {
+    font-family: 'Shunpu', serif !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+}
+
+/* 番号だけ少し整える */
+#postList a {
+    letter-spacing: 0.05em;
+}
+
+/* 日時は薄く */
+#postList .time {
+    opacity: 0.7;
+    font-size: 16px !important;
+}
