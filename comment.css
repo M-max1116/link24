@@ -1,0 +1,99 @@
+
+/* =========================
+   共通
+========================= */
+.tgs-fukidashi,
+.kmy-fukidashi {
+  position: relative;
+  width: fit-content;
+
+  padding: 12px 16px;
+
+  background: #fff;
+
+  color: #333;
+  line-height: 1.8;
+}
+
+/* =========================
+   ラベル共通（ベース）
+========================= */
+.tgs-fukidashi::before,
+.kmy-fukidashi::before {
+  content: attr(data-name);
+
+  position: absolute;
+  top: -25px;
+  left: 10px;
+
+  padding: 6px 14px;
+
+  background: #fff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 2px;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   tgs（赤）
+========================= */
+.tgs-fukidashi {
+  border: 2px solid #e74c3c;
+}
+
+.tgs-fukidashi::before {
+  color: #e74c3c; /* 赤ラベル */
+}
+
+.tgs-fukidashi::after {
+  content: "";
+  position: absolute;
+
+  top: calc(100% + 5px);
+  left: 50%;
+
+  width: 30px;
+  height: 2px;
+
+  background-color: #e74c3c;
+
+  transform: translateX(-50%) rotate(50deg);
+
+  box-shadow:
+    0 2px 0 #ffffff,
+    0 -2px 0 #ffffff;
+}
+
+/* =========================
+   kmy（青）
+========================= */
+.kmy-fukidashi {
+  border: 2px solid #315498;
+}
+
+.kmy-fukidashi::before {
+  color: #315498; /* ★青ラベル */
+}
+
+.kmy-fukidashi::after {
+  content: "";
+  position: absolute;
+
+  top: calc(100% + 5px);
+  left: 50%;
+
+  width: 30px;
+  height: 2px;
+
+  background-color: #315498;
+
+  transform: translateX(-50%) rotate(50deg);
+
+  box-shadow:
+    0 2px 0 #ffffff,
+    0 -2px 0 #ffffff;
+}
