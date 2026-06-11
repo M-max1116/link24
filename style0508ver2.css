@@ -1,108 +1,56 @@
+@font-face {
+    font-family: 'Shunpu';
+    src: url('https://cdn.jsdelivr.net/gh/M-max1116/font1@main/Ver1.01_Shunpu_Regular.woff2') format('woff2');
+}
 
-/* =========================
-   共通（あなたのCSS基準そのまま）
-========================= */
-.tgs-fukidashi,
-.kmy-fukidashi {
-  position: relative;
-  width: fit-content;
-
-  padding: 12px 16px;
-
-  background: #fff;
-  color: #333;
-
-  /* ★完全一致 */
-  font-size: 18px;
-  line-height: 1.2;
-
-  margin: 2px 0 !important;
+@font-face {
+    font-family: 'Kanji_yutsudu';
+    src: url('https://cdn.jsdelivr.net/gh/M-max1116/FONT2@main/Kanji_yutsudu-Regular.woff2') format('woff2');
 }
 
 /* =========================
-   tgs（トガシ基準）
+   小宮本文
 ========================= */
-.tgs-fukidashi {
-  font-family: 'Kanji_yutsudu', sans-serif !important;
-
-  border: 2px solid #e74c3c;
-
-  letter-spacing: 0.16em; /* ★元と同じ */
+.kmy {
+    font-family: 'Shunpu', serif !important;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    margin: 2px 0 !important;
 }
 
 /* =========================
-   kmy（小宮基準）
+   トガシ本文
 ========================= */
-.kmy-fukidashi {
-  font-family: 'Shunpu', serif !important;
-
-  border: 2px solid #315498;
-
-  letter-spacing: 0.15em; /* ★元と同じ */
+.tgs {
+    font-family: 'Kanji_yutsudu', sans-serif !important;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.16em;
+    margin: 2px 0 !important;
 }
 
 /* =========================
-   ラベル（サイズも完全一致）
+   ★番号・名前・日時（重要修正）
 ========================= */
-.tgs-fukidashi::before,
-.kmy-fukidashi::before {
-  content: attr(data-name);
-
-  position: absolute;
-  top: -25px;
-  left: 10px;
-
-  padding: 6px 14px;
-
-  background: #fff;
-
-  font-size: 18px;  /* ★ここ重要：本文と統一 */
-
-  line-height: 1.2;
-
-  font-family: inherit;
-
-  font-weight: 700;
-
-  border-radius: 2px;
-
-  white-space: nowrap;
+#postList a,
+#postList .name,
+#postList .time {
+    font-family: 'Shunpu', serif !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
 }
 
-/* 色だけ分岐 */
-.tgs-fukidashi::before {
-  color: #e74c3c;
+/* 番号だけ少し整える */
+#postList a {
+    letter-spacing: 0.05em;
 }
 
-.kmy-fukidashi::before {
-  color: #315498;
-}
-
-/* =========================
-   しっぽ（そのまま維持）
-========================= */
-.tgs-fukidashi::after,
-.kmy-fukidashi::after {
-  content: "";
-  position: absolute;
-
-  top: calc(100% + 5px);
-  left: 50%;
-
-  width: 30px;
-  height: 2px;
-
-  box-shadow:
-    0 2px 0 #ffffff,
-    0 -2px 0 #ffffff;
-}
-
-.tgs-fukidashi::after {
-  background-color: #e74c3c;
-  transform: translateX(-50%) rotate(50deg);
-}
-
-.kmy-fukidashi::after {
-  background-color: #315498;
-  transform: translateX(50%) rotate(-50deg);
+/* 日時は薄く */
+#postList .time {
+    opacity: 0.7;
+    font-size: 16px !important;
 }
